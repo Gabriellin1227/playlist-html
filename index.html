@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playlist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Comic+Neue:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+        <!-- LEFT SIDE -->
+        <div class="left-side">
+            <h1>Playlist</h1>
+            <p>Músicas que me lembram você</p>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right-side">
+            <!-- Hidden radios -->
+            <input type="radio" name="slider" id="item-1" checked />
+            <input type="radio" name="slider" id="item-2" />
+            <input type="radio" name="slider" id="item-3" />
+            <input type="radio" name="slider" id="item-4" />
+            <input type="radio" name="slider" id="item-5" />
+
+            <!-- CARDS -->
+            <div class="cards">
+                <label class="card" for="item-1" id="song-1">
+                    <img src="img/IMG_0344.PNG" alt="perfect" />
+                </label>
+                <label class="card" for="item-2" id="song-2">
+                    <img src="img/IMG_0344.PNG" alt="Rewrite the Stars" />
+                </label>
+                <label class="card" for="item-3" id="song-3">
+                    <img src="img/IMG_0344.PNG" alt="wanna be yours" />
+                </label>
+                <label class="card" for="item-4" id="song-4">
+                    <img src="img/IMG_0344.PNG" alt="dandelions" />
+                </label>
+                <label class="card" for="item-5" id="song-5">
+                    <img src="img/IMG_0344.PNG" alt="About You" />
+                </label>
+            </div>
+
+            <!-- PLAYER -->
+            <div class="player">
+                <div class="song-info active" id="song-info-1" data-audio="audio/Best Part (feat. H.E.R.) - Daniel Caesar.mp3">
+                    <div class="title">Best Part</div>
+                    <div class="song-details">
+                        <span class="artist">Daniel Caesar</span>
+                        <span class="duration">3:29</span>
+                    </div>
+                </div>
+
+                <div class="song-info" id="song-info-2" data-audio="audio/Disco - Surf Curse.mp3">
+                    <div class="title">Disco</div>
+                    <div class="song-details">
+                        <span class="artist">Surf Curse</span>
+                        <span class="duration">2:32</span>
+                    </div>
+                </div>
+
+                <div class="song-info" id="song-info-3" data-audio="audio/No. 1 Party Anthem - Arctic Monkeys.mp3">
+                    <div class="title">No. 1 Party Anthem</div>
+                    <div class="song-details">
+                        <span class="artist">Artic monkeys</span>
+                        <span class="duration">4:03</span>
+                    </div>
+                </div>
+
+                <div class="song-info" id="song-info-4" data-audio="audio\PILLOWTALK - ZAYN.mp3">
+                    <div class="title">PILLOWTALK</div>
+                    <div class="song-details">
+                        <span class="artist">ZAYN</span>
+                        <span class="duration">3:23</span>
+                    </div>
+                </div>
+
+                <div class="song-info" id="song-info-5" data-audio="audio/Velha Infância - 2004 Digital Remaster - Tribalistas.mp3">
+                    <div class="title">Velha Infância</div>
+                    <div class="song-details">
+                        <span class="artist">Tribalistas</span>
+                        <span class="duration">4:10</span>
+                    </div>
+                </div>
+
+                <!-- AUDIO ELEMENT -->
+                <audio id="audio-player" preload="auto"></audio>
+
+                <!-- PLAYER CONTROLS -->
+                <div class="controls">
+                    <button id="prev">◁</button>
+                    <button id="pause">▐▐</button>
+                    <button id="next">▷</button>
+                </div>
+
+                <!-- EXTRA CONTROLS -->
+                <div class="extra-controls">
+                    <button id="favorite" class="favorite-btn">♡</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="notificationModal">
+        <div class="modal-content" id="modalContent">
+            <h2>Alguem que gosta muito de você te mandou essa playlist...</h2>
+            <p>Ei, pra você S2, espero que goste!</p>
+            <button class="modal-close" onclick="closeModal()">Abrir Playlist</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
