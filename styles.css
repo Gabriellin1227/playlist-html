@@ -3,7 +3,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    font-family: "Gochi Hand", cursive;
+    font-family: 'Nunito', sans-serif;
     overflow-x: hidden;
 }
 
@@ -49,7 +49,7 @@ body {
     margin: 0;
     font-size: 3.5rem;
     /* Updated from 3rem */
-    font-family: "Comic Neue", cursive;
+    font-family: 'Nunito', sans-serif;
     font-weight: 700;
     transition: color 0.8s ease;
 }
@@ -166,7 +166,7 @@ input[type="radio"] {
 .song-info .title {
     font-size: 1.6rem;
     /* Updated from 1.4rem */
-    font-family: "Comic Neue", cursive;
+    font-family: 'Nunito', sans-serif;
     font-weight: 700;
     margin-bottom: 5px;
     transition: color 0.8s ease;
@@ -180,7 +180,7 @@ input[type="radio"] {
     margin-bottom: 5px;
     font-size: 1.1rem;
     /* Updated from 1rem */
-    font-family: "Comic Neue", cursive;
+    font-family: 'Nunito', sans-serif;
 }
 
 .song-details .artist {
@@ -198,7 +198,7 @@ input[type="radio"] {
     margin-top: 3px;
     display: flex;
     justify-content: space-between;
-    font-family: "Comic Neue", cursive;
+    font-family: 'Nunito', sans-serif;
     color: inherit;
 }
 
@@ -247,7 +247,7 @@ input[type="radio"] {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-family: "Comic Neue", cursive;
+    font-family: 'Nunito', sans-serif;
     gap: 10px;
 }
 
@@ -282,7 +282,7 @@ input[type="radio"] {
 .modal-content {
     padding: 20px;
     border-radius: 14px;
-    font-family: "Comic Neue", cursive;
+    font-family: 'Nunito', sans-serif;
     color: #333;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     max-width: 320px;
@@ -321,7 +321,7 @@ input[type="radio"] {
     border-radius: 8px;
     margin-top: 15px;
     cursor: pointer;
-    font-family: "Comic Neue", cursive;
+    font-family: 'Nunito', sans-serif;
     font-size: 1.1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
     color: #333;

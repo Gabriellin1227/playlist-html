@@ -7,6 +7,7 @@
     <title>Playlist</title>
     <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Comic+Neue:wght@400;700&display=swap"
         rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -49,11 +50,12 @@
 
             <!-- PLAYER -->
             <div class="player">
-                <div class="song-info active" id="song-info-1" data-audio="audio/Best Part (feat. H.E.R.) - Daniel Caesar.mp3">
+                <!-- SONG INFOS -->
+                <div class="song-info active" id="song-info-1"
+                    data-audio="audio/Best Part (feat. H.E.R.) - Daniel Caesar.mp3">
                     <div class="title">Best Part</div>
                     <div class="song-details">
                         <span class="artist">Daniel Caesar</span>
-                        <span class="duration">3:29</span>
                     </div>
                 </div>
 
@@ -61,36 +63,44 @@
                     <div class="title">Disco</div>
                     <div class="song-details">
                         <span class="artist">Surf Curse</span>
-                        <span class="duration">2:32</span>
                     </div>
                 </div>
 
                 <div class="song-info" id="song-info-3" data-audio="audio/No. 1 Party Anthem - Arctic Monkeys.mp3">
                     <div class="title">No. 1 Party Anthem</div>
                     <div class="song-details">
-                        <span class="artist">Artic monkeys</span>
-                        <span class="duration">4:03</span>
+                        <span class="artist">Arctic Monkeys</span>
                     </div>
                 </div>
 
-                <div class="song-info" id="song-info-4" data-audio="audio\PILLOWTALK - ZAYN.mp3">
+                <div class="song-info" id="song-info-4" data-audio="audio/PILLOWTALK - ZAYN.mp3">
                     <div class="title">PILLOWTALK</div>
                     <div class="song-details">
                         <span class="artist">ZAYN</span>
-                        <span class="duration">3:23</span>
                     </div>
                 </div>
 
-                <div class="song-info" id="song-info-5" data-audio="audio/Velha Infância - 2004 Digital Remaster - Tribalistas.mp3">
+                <div class="song-info" id="song-info-5"
+                    data-audio="audio/Velha Infância - 2004 Digital Remaster - Tribalistas.mp3">
                     <div class="title">Velha Infância</div>
                     <div class="song-details">
                         <span class="artist">Tribalistas</span>
-                        <span class="duration">4:10</span>
                     </div>
                 </div>
 
-                <!-- AUDIO ELEMENT -->
+                <!-- AUDIO -->
                 <audio id="audio-player" preload="auto"></audio>
+
+                <!-- PROGRESS BAR -->
+                <div class="progress-bar" id="progress-container">
+                    <div class="progress" id="progress"></div>
+                </div>
+
+                <!-- TIME INDICATORS -->
+                <div class="time-indicator">
+                    <span id="current-time">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
 
                 <!-- PLAYER CONTROLS -->
                 <div class="controls">
@@ -99,24 +109,23 @@
                     <button id="next">▷</button>
                 </div>
 
-                <!-- EXTRA CONTROLS -->
+                <!-- FAVORITE -->
                 <div class="extra-controls">
                     <button id="favorite" class="favorite-btn">♡</button>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- MODAL -->
-    <div class="modal-overlay" id="notificationModal">
-        <div class="modal-content" id="modalContent">
-            <h2>Alguem que gosta muito de você te mandou essa playlist...</h2>
-            <p>Ei, pra você S2, espero que goste!</p>
-            <button class="modal-close" onclick="closeModal()">Abrir Playlist</button>
-        </div>
-    </div>
 
-    <script src="script.js"></script>
+            <!-- MODAL -->
+            <div class="modal-overlay" id="notificationModal">
+                <div class="modal-content" id="modalContent">
+                    <h2>Alguem que gosta muito de você te mandou essa playlist...</h2>
+                    <p>Ei, pra você S2, espero que goste!</p>
+                    <button class="modal-close" onclick="closeModal()">Abrir Playlist</button>
+                </div>
+            </div>
+
+            <script src="script.js"></script>
 </body>
 
 </html>

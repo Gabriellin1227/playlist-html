@@ -59,6 +59,33 @@ window.onload = () => {
     loadSong(0);
 };
 
+const progress = document.getElementById('progress');
+const currentTimeEl = document.getElementById('current-time');
+const durationEl = document.getElementById('duration');
+const progressBar = document.querySelector('.progress-bar');
+
+function formatTime(seconds) {
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60);
+    return `${min}:${sec < 10 ? '0' + sec : sec}`;
+}
+
+audioPlayer.addEventListener('loadedmetadata', () => {
+    durationEl.textContent = formatTime(audioPlayer.duration);
+});
+
+audioPlayer.addEventListener('timeupdate', () => {
+    const current = audioPlayer.currentTime;
+    const duration = audioPlayer.duration;
+
+    if (!isNaN(duration)) {
+        const percent = (current / duration) * 100;
+        progress.style.width = `${percent}%`;
+
+        currentTimeEl.textContent = formatTime(current);
+    }
+});
+
 // Optional: modal popup
 function closeModal() {
     document.getElementById('notificationModal').style.display = 'none';
